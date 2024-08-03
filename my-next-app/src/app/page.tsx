@@ -1,13 +1,19 @@
 import React from 'react'
-import Layout from './components/Layout'
-import Hero from './components/Hero'
-import Features from './components/Features'
+import Layout from '@/components/sections/Layout'
+import { OrbitingCirclesDemo } from '../components/sections/AICircle'
+import Features from '../components/sections/Features'
+import { BentoDemo } from '../components/sections/BentoDemo'
+import Hero from '../components/sections/Hero'
 
 const Home: React.FC = () => {
   return (
     <Layout>
-      <Hero />
-      <Features />
+      <main className="container mx-auto px-4 py-8">
+        <Hero />
+        <OrbitingCirclesDemo />
+        <Features />
+        <BentoDemo />
+      </main>
     </Layout>
   )
 }

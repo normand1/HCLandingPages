@@ -2,4 +2,13 @@
 // by running `wrangler types --env-interface CloudflareEnv env.d.ts`
 
 interface CloudflareEnv {
+    HYPERCATCHER_LINK_HEADER: string;
+    HYPERCATCHER_LINK_CRYPTO: string;
+    HYPERCATCHER_LINK_AI: string;
+}
+
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv extends CloudflareEnv {}
+  }
 }

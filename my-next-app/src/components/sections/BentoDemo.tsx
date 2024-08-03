@@ -1,0 +1,129 @@
+import {
+  BellIcon,
+  CalendarIcon,
+  GlobeIcon,
+  InputIcon,
+} from "@radix-ui/react-icons";
+import Image from 'next/image';
+
+import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
+
+const features = [
+  {
+    name: "Transcripts",
+    description: "Automatically generate transcripts for your audio and video files.",
+    href: "/",
+    cta: "Learn more",
+    background: (
+      <div className="absolute inset-0 overflow-hidden group">
+        <div className="absolute inset-0 -top-10">
+          <Image
+            src="/transcripts-demo.gif"
+            alt="Transcripts demo"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center center' }}
+            className="transition-all duration-300 transform blur-[2px] brightness-75 group-hover:blur-sm group-hover:brightness-50"
+          />
+        </div>
+      </div>
+    ),
+    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+    lightText: true,
+  },
+  {
+    Icon: InputIcon,
+    name: "Context Actions",
+    description: "Take multiple actions with a tap.",
+    href: "/",
+    cta: "Learn more",
+    background: (
+      <div className="absolute inset-0 overflow-hidden group">
+        <div className="absolute inset-0 -top-10">
+          <Image
+            src="/feature-chapter-menu.gif"
+            alt="Full text search demo"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
+            className="transition-all duration-300 transform blur-[2px] brightness-75 group-hover:blur-sm group-hover:brightness-50"
+          />
+        </div>
+      </div>
+    ),
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+    lightText: true,
+  },
+  {
+    Icon: GlobeIcon,
+    name: "Unlock Local ML",
+    description: "Uses the whisper model for local transcription",
+    href: "/",
+    cta: "Learn more",
+    background: (
+        <div className="absolute inset-0 overflow-hidden group">
+          <div className="absolute inset-0 -top-10">
+            <Image
+              src="/whisper-logo.png"
+              alt="Full text search demo"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
+              className="transition-all duration-300 transform blur-[2px] brightness-75 group-hover:blur-sm group-hover:brightness-50"
+            />
+          </div>
+        </div>
+      ),
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+  },
+  {
+    Icon: CalendarIcon,
+    name: "Trending Podcast Suggestions",
+    description: "Find the best new podcasts!",
+    href: "/",
+    cta: "Learn more",
+    background: (
+        <div className="absolute inset-0 overflow-hidden group">
+          <div className="absolute inset-0 -top-10">
+            <Image
+              src="/trending-podcasts.gif"
+              alt="Full text search demo"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
+              className="transition-all duration-300 transform blur-[2px] brightness-75 group-hover:blur-sm group-hover:brightness-50"
+            />
+          </div>
+        </div>
+      ),
+      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+    lightText: true,
+  },
+  {
+    Icon: BellIcon,
+    name: "Local First",
+    description:
+      "Find your transcripts in local storage for easy access anytime.",
+    href: "/",
+    cta: "Learn more",
+    background: (
+      <div className="absolute inset-0 overflow-hidden group">
+        <Image
+          src="/transcripts-saved.jpg"
+          alt="Transcripts demo"
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          className="transition-all duration-300 transform blur-[2px] brightness-75 group-hover:blur-sm group-hover:brightness-50"
+        />
+      </div>
+    ),
+    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+    lightText: true,
+  },
+];
+
+export function BentoDemo() {
+  return (
+    <BentoGrid className="lg:grid-rows-3">
+      {features.map((feature) => (
+        <BentoCard key={feature.name} {...feature} />
+      ))}
+    </BentoGrid>
+  );
+}
