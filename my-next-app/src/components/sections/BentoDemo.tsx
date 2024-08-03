@@ -12,7 +12,7 @@ const features = [
   {
     name: "Transcripts",
     description: "Automatically generate transcripts for your audio and video files.",
-    href: "/",
+    href: process.env.HYPERCATCHER_LINK_AI,
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 overflow-hidden group">
@@ -34,7 +34,7 @@ const features = [
     Icon: InputIcon,
     name: "Context Actions",
     description: "Take multiple actions with a tap.",
-    href: "/",
+    href: process.env.HYPERCATCHER_LINK_AI,
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 overflow-hidden group">
@@ -56,7 +56,7 @@ const features = [
     Icon: GlobeIcon,
     name: "Unlock Local ML",
     description: "Uses the whisper model for local transcription",
-    href: "/",
+    href: process.env.HYPERCATCHER_LINK_AI,
     cta: "Learn more",
     background: (
         <div className="absolute inset-0 overflow-hidden group">
@@ -77,7 +77,7 @@ const features = [
     Icon: CalendarIcon,
     name: "Trending Podcast Suggestions",
     description: "Find the best new podcasts!",
-    href: "/",
+    href: process.env.HYPERCATCHER_LINK_AI,
     cta: "Learn more",
     background: (
         <div className="absolute inset-0 overflow-hidden group">
@@ -100,7 +100,7 @@ const features = [
     name: "Local First",
     description:
       "Find your transcripts in local storage for easy access anytime.",
-    href: "/",
+    href: process.env.HYPERCATCHER_LINK_AI,
     cta: "Learn more",
     background: (
       <div className="absolute inset-0 overflow-hidden group">
