@@ -121,9 +121,15 @@ const features = [
 export function BentoDemoCrypto() {
   return (
     <BentoGrid className="lg:grid-rows-3">
-      {features.map((feature) => (
-        <BentoCard key={feature.name} {...feature} />
-      ))}
-    </BentoGrid>
+    {features.map((feature) => (
+      <BentoCard
+        key={feature.name}
+        {...feature}
+        Icon={feature.Icon}
+        lightText={feature.lightText || false}
+        href={feature.href ?? ''}
+      />
+    ))}
+  </BentoGrid>
   );
 }
